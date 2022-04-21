@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+        
+
+Pagina de Buscador
+
+{% endblock %}
+
+{% block content %} <!--contenido que cambia-->
+
+<h1>Buscador de Articulos</h1>
+
+<form action="/buscar/" method = "GET">
+    
+    <input type="text" name="articulo" id="articulo">
+
+    <input type="submit" value="Buscar">
+
+</form>
+   
+
+
+
+   {% endblock %}
+
+
+
+
+<h1>Buscador de articulos
+    
+</h1>
+

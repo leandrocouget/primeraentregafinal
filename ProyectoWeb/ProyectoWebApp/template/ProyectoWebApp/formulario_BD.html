@@ -1,0 +1,16 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+
+    {% block cambiante %}
+
+    <form action="/formulario/" method="post">{% csrf_token %}
+
+        <p>Buscador: <input type="text" name="Buscador"></p>
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% endblock%}
+

@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+        
+Resultados
+
+{% endblock %}
+
+{% block content %} <!--contenido que cambia-->
+
+     
+<p>Estas buscando : <strong>{{query}}</strong></p>
+
+
+{% if articulos %}
+
+    <p>Articulos encontrados : {{articulos|length}} articulos</p>
+
+    <ul>
+        
+        
+        {% for articulo in articulos %}
+        
+            <li>
+                {{articulo.nombre}} &nbsp; {{articulo.precio}} &nbsp; {{articulo.cantidad}}
+
+                
+        
+            </li>
+    
+        {% endfor %}
+    
+    </ul>
+{% else %}
+    
+
+    <p>No se encuentra el articulo buscado</p>
+
+
+{% endif %}
+
+
+
+{% endblock %}
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      
+
+  
+
+
+
+
+

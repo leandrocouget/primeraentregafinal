@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+        
+
+Pagina de Formulario
+
+{% endblock %}
+        
+{% block content %} <!--contenido que cambia-->
+<h1>Formulario de Registro</h1>
+
+{% if miformulario.errors %}
+
+<p style="color: red;"> Estan mal los datos, revisar</p>
+
+{% endif %}
+
+   <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+
+                {{ registroformulario.as_table}}
+
+        </table>
+   
+        <input type="submit" value="Enviar">
+        
+
+
+   </form>
+
+
+
+   {% endblock %}
