@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
-from .models import register, articles
-from .forms import registroformulario, registroArticulos
+from .models import register, articles, contact
+from .forms import registroformulario, registroArticulos, registrocontacto
 
 
 
@@ -70,8 +70,23 @@ def ingreso(request):
 
 def contacto(request):
    
-    return render(request, "contacto.html")
+    if request.method == 'POST':
+        miformulario = registrocontacto(request.POST)
+        print(miformulario)
+        
+        if registrocontacto.is_valid:
+            informacion = miformulario.cleaned_data
+            registro = contact (nombre=informacion['nombre'], apellido=informacion['apellido'], telefono=informacion['telefono'], ciudad=informacion['ciudad'], email=informacion['email'], comentario=informacion['comentario'])
+            registro.save()
+
+            return render(request, "inicio.html")
+
+    else:
+        miformulario = registrocontacto()
+    return render(request, "contacto.html", {"registrocontacto": miformulario})
 
 def base(request):
        
     return render(request, "base.html")
+
+

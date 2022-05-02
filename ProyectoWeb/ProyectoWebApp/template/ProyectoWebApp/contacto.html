@@ -4,13 +4,33 @@
 {% block title %}
         
 
-Pagina de Contacto
+Pagina de Formulario de Contacto
 
 {% endblock %}
-
+        
 {% block content %} <!--contenido que cambia-->
+<h1>formulario de contacto</h1>
 
-<h3>Contacto</h3>
+{% if miformulario.errors %}
+
+<p style="color: red;"> Estan mal los datos, revisar</p>
+
+{% endif %}
+
+   <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+
+                {{ registrocontacto.as_table}}
+
+        </table>
+   
+        <input type="submit" value="Enviar">
+        
+
+
+   </form>
+
 
 
    {% endblock %}

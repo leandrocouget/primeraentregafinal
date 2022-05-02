@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ProyectoWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Usuario/Desktop/primera entrega final/ProyectoWeb/ProyectoWebApp/template/ProyectoWebApp/'],
+        'DIRS': ['C:/Users/Usuario/Desktop/primeraentregafinal/ProyectoWeb/ProyectoWebApp/template/ProyectoWebApp/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

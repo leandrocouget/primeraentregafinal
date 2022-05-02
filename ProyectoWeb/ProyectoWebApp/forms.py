@@ -12,4 +12,14 @@ class registroArticulos(forms.Form):
     nombre = forms.CharField()
     precio = forms.CharField()
     cantidad = forms.CharField()
-   
+
+class registrocontacto(forms.Form):
+    nombre = forms.CharField()
+    apellido = forms.CharField()
+    telefono = forms.CharField()
+    ciudad = forms.CharField()
+    email = forms.EmailField()
+    comentario = forms.CharField(widget=forms.Textarea, required=True)
+
+
+  
