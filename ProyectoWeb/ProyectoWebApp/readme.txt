@@ -30,11 +30,25 @@ http://127.0.0.1:8000/formulario
 en esta pagina se encuentra con un formulario que cuenta con 5 campos a llenar para que se guarden en la base de datos en el models "register"
 
 --------------------------------------------------------------------------------
+contacto:
+
+http://127.0.0.1:8000/contacto
+
+
+en esta pagina se encuentra con un formulario de contacto que cuenta con 6 campos para que se guarden en la base de datos en "Contacts"
+
+--------------------------------------------------------------------------------
+articulos:
+
+http://127.0.0.1:8000/ingreso
+
+en esta pagina se encuentra con un formulario para la carga de articulos en la base de datos.
+--------------------------------------------------------------------------------
+
 
 Tambien cuenta con los siguientes templates creados que estan sin terminar.
 
 Para visitar esos templates:
 http://127.0.0.1:8000/blog
-http://127.0.0.1:8000/contacto
 
 Todos los template mencionados en este archivo cuentan con herencia de html, tienen estilos aplicados dentro del html para que no quede muy crudo y no cuenta con vistas resposive momentaneamente.
